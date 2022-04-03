@@ -22,6 +22,7 @@ class UserSeeder extends Seeder
             'name' => Str::random(10),
             'email' => 'test@user.com',
             'password' => Hash::make(123456789),
+            'is_admin' => 0,
             'created_at' => Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon::now()->toDateTimeString(),
         ],
