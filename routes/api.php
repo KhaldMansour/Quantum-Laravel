@@ -32,16 +32,15 @@ Route::group(['namespace' => 'App\Http\Controllers\API'], function ($router) {
         Route::post('', 'CategoryController@store');
 
         Route::post('{id}/product', 'CategoryController@associateProduct');
-
     });
 
     Route::group(['prefix' => 'products'] , function ($router) {
 
         Route::get('', 'ProductController@index');
 
-        Route::get('{id}', 'ProductController@show');
-
         Route::get('active-products', 'ProductController@activeProducts');
+        
+        Route::get('{id}', 'ProductController@show');
         
         Route::post('', 'ProductController@store');
     });
